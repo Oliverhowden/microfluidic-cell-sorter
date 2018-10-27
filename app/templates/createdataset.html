@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <style>
+    .padd {
+      padding-left: 10px;
+      margin-right: 20px;
+    }
+    .padding {
+      padding-left: 10px;
+      margin-right: 20px;
+      text-align: left;
+    }
+    .datasetpadding {
+      padding-left: 10px;
+      margin-right: 20px;
+      text-align: left;
+      margin-top: 10px;
+
+    }
+    .black {
+            background-color: black;
+    }
+    .formpadd{
+            margin-top: 20px;
+            margin-bottom: 10px;
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
+
+  <title>Microfluidic Cell Sorter</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename ='bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+
+  <link href="{{ url_for('static', filename ='bootstrap.js') }}" rel="scripts">
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename ='cover.css') }}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+
+  <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h4 class="masthead-brand">Microfluidic Cell Sorter</h4>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link" href="/">Classify Sample</a>
+          <a class="nav-link" href="train.html">Train Network</a>
+          <a class="nav-link active" href="createdataset.html">Create Dataset</a>
+        </nav>
+      </div>
+    </header>
+<div class="row">
+        <div class="col-md"></div>
+        <div class="col-md">
+                <main role="main" class="inner cover">
+                  <!--<h1 class="cover-heading">Microfluidic Cell Sorter</h1>-->
+                  <div class="image-and-buttons">
+                    <img width="400px" height="400px" src="{{ url_for('video_feed') }}" class="rounded"><br>
+</div>
+                </main>
+</div>
+<div class="col-md">
+        <h5 class="padding">Data Augmentation Parameters</h5>
+        <select class="custom-select datasetpadding">
+          <option selected>Dataset factor increase</option>
+          <option value="1">2</option>
+          <option value="2">5</option>
+          <option value="3">10</option>
+        </select>
+        <div class="custom-control custom-checkbox datasetpadding">
+          <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+          <label class="custom-control-label" for="customCheckDisabled">Rotate 270º</label>
+        </div>
+        <div class="custom-control custom-checkbox datasetpadding">
+                <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+                <label class="custom-control-label" for="customCheckDisabled">Rotate 90º</label>
+        </div>
+        <div class="custom-control custom-checkbox datasetpadding">
+          <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+          <label class="custom-control-label" for="customCheckDisabled">Flip Horizontal</label>
+        </div>
+        <div class="custom-control custom-checkbox datasetpadding">
+          <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+          <label class="custom-control-label" for="customCheckDisabled">Flip Vertical</label>
+        </div>
+        <div class="custom-control custom-checkbox datasetpadding">
+          <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+          <label class="custom-control-label" for="customCheckDisabled">Crop Random</label>
+        </div>
+        <div class="custom-control custom-checkbox datasetpadding">
+          <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+          <label class="custom-control-label" for="customCheckDisabled">Resize Random</label>
+        </div>
+        <div class="all-buttons"><br>
+          <button class="btn btn-success padd">Create</button>
+          <button class="btn btn-warning padd">Reset</button>
+          <button class="btn btn-danger padd">Stop</button>
+  </div>
+</div>
+</div>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Built by Oliver Howden<br>in partnership with WeHi</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="../../../../assets/js/vendor/popper.min.js"></script>
+  <script src="../../../../dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

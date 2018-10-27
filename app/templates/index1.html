@@ -1,0 +1,36 @@
+
+<html>
+  <head>
+          <style>
+          h1 {
+                  text-align:center;
+          }
+          .all-buttons{
+                  text-align: center;
+          }
+          .image-and-buttons{
+                  text-align: center;
+          }
+          </style>
+
+    <title>Video Streaming Demonstration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1 class="display-2">Microfluidic Cell Sorter</h1>
+    <div class="image-and-buttons">
+    <img src="{{ url_for('video_feed') }}"><br>
+    <div class="all-buttons">
+    <button class="btn btn-success">Start</button>
+    <button class="btn btn-danger">Stop</button>
+    <button class="btn btn-warning">Reset</button>
+
+</div>
+        </div>
+  </body>
+</html>
