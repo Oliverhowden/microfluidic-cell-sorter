@@ -15,7 +15,7 @@ simulationData = True
 
 if simulationData:
     # Use our recorded video from the acquisition
-    video = cv2.VideoCapture("../videos/8aa.avi")
+    video = cv2.VideoCapture("../data/8um-beads_20um-channel.avi")
 else:
     # Connect to the first available video feed
     video = cv2.VideoCapture(0)
