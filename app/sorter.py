@@ -8,7 +8,7 @@ from collections import OrderedDict
 from customclasses.RoiExtractorNew import ROIExtractorNew
 from customclasses.Tracker import Tracker
 from customclasses import classifier
-from augmentDat import Augmentation
+#from augmentDat import Augmentation
 import serial
 
 simulationData = True
@@ -81,7 +81,7 @@ extractor = ROIExtractorNew()
 extractor.init()
 
 # Augmentor
-aug = Augmentation()
+#aug = Augmentation()
 
 # Read an initial image from the video stream to use
 # as noise reduction, also to ensure that the stream is ok
@@ -319,8 +319,8 @@ def run():
     if not createDataset:
         print('totalsessionTime={}'.format(now - time.time()))
         print('Overalltime={}'.format(evalTotal / evalCount))
-    if createDataset:
-        aug.runAugmentation(os.path.join(dirname))
+    #if createDataset:
+        #aug.runAugmentation(os.path.join(dirname))
 
 
 # When everything is done, release the capture
